@@ -1,33 +1,82 @@
-backend/HELP.md
-target/
-!backend/.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# -------------------
+# Frontend Angular
+# -------------------
 
-### STS ###
-.apt_generated
+/node_modules/
+/dist/
+/out-tsc/
+/tmp/
+/.bazel-out/
+
+npm-debug.log*
+yarn-error.log*
+
+.angular/cache/
+/.sass-cache/
+/connect.lock
+/coverage/
+/libpeerconnection.log
+/testem.log
+/typings
+
+# -------------------
+# Backend Java Spring
+# -------------------
+
+/target/
+/build/
+
+!backend/.mvn/wrapper/maven-wrapper.jar
+
+# -------------------
+# IDEs & Editors
+# -------------------
+
+# IntelliJ IDEA
+/.idea/
+/*.iml
+/*.ipr
+/*.iws
+
+# VS Code
+/.vscode/
+/.history/
+
+# Eclipse / STS
+.project
 .classpath
 .factorypath
-.project
-.settings
+.settings/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-backend/.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+# -------------------
+# System files
+# -------------------
+
+.DS_Store
+Thumbs.db
+
+# -------------------
+# Logs
+# -------------------
+
+npm-debug.log*
+yarn-error.log*
+
+# -------------------
+# Miscellaneous
+# -------------------
+
+# Ignore logs, caches, temp files
+*.log
+*.tmp
+*.temp
+
