@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card col-md-6 offset-3 mt-2">
+    <div class="card-header">Edit Customer</div>
+    <div class="card-body">
+      <div *ngIf="errorMessage" class="alert alert-danger">
+        {{ errorMessage }}
+      </div>
+      <form [formGroup]="editForm" (ngSubmit)="handleUpdateCustomer()">
+        <div class="mb-3">
+          <label class="form-label">Name:</label>
+          <input type="text" formControlName="name" class="form-control">
+          <span class="text-danger"
+                *ngIf="editForm.controls['name'].touched
+                && editForm.controls['name'].errors
+                && editForm.controls['name'].errors['required']">
+            Name is Required
+          </span>
+          <span class="text-danger"
+                *ngIf="editForm.controls['name'].touched
+                && editForm.controls['name'].errors
+                && editForm.controls['name'].errors['minlength']">
+            Name must be at least 4 characters
+          </span>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email:</label>
+          <input type="text" formControlName="email" class="form-control">
+          <span class="text-danger"
+                *ngIf="editForm.controls['email'].touched
+                && editForm.controls['email'].errors
+                && editForm.controls['email'].errors['required']">
+            Email is Required
+          </span>
+          <span class="text-danger"
+                *ngIf="editForm.controls['email'].touched
+                && editForm.controls['email'].errors
+                && editForm.controls['email'].errors['email']">
+            Email is not valid
+          </span>
+        </div>
+        <button [disabled]="!editForm.valid" class="btn btn-info">Update</button>
+        <button type="button" (click)="handleCancel()" class="btn btn-secondary ms-2">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

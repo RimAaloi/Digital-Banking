@@ -21,13 +21,16 @@
           </tr>
           </thead>
           <tbody>
-          <tr *ngFor="let c of customers | async">
+          <tr *ngFor="let c of listCustomers"> <!-- Utilisation de listCustomers au lieu de customers | async -->
             <td>{{c.id}}</td>
             <td>{{c.name}}</td>
             <td>{{c.email}}</td>
             <td>
-              <button (click)="handleDeleteCustomer(c)" class="btn btn-danger">
+              <button (click)="handleDeleteCustomer(c)" class="btn btn-danger me-2">
                 <i class="bi bi-trash"></i>
+              </button>
+              <button (click)="handleEditCustomer(c)" class="btn btn-warning">
+                <i class="bi bi-pencil"></i>
               </button>
             </td>
             <td>

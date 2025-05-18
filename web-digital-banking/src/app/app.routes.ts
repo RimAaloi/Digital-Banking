@@ -4,14 +4,20 @@ import {AccountsComponent} from './accounts/accounts.component';
 import {CustomersComponent} from './customers/customers.component';
 import {NewCustomerComponent} from './new-customer/new-customer.component';
 import {CustomerAccountsComponent} from './customer-accounts/customer-accounts.component';
+import {EditCustomerComponent} from './edit-customer/edit-customer.component';
+import {LoginComponent} from './login/login.component';
+import {AdminTemplateComponent} from './admin-template/admin-template.component';
 
 export const routes: Routes = [
-  { path :"customers", component : CustomersComponent},
-  { path :"accounts", component : AccountsComponent},
-  { path :"new-customer", component : NewCustomerComponent},
-  { path :"customer-accounts/:id", component : CustomerAccountsComponent},
-  { path : "**", redirectTo : "customers"},
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path :"login" , component : LoginComponent},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  {path:"admin",component:AdminTemplateComponent,children:[
+      { path :"customers", component : CustomersComponent},
+      { path :"accounts", component : AccountsComponent},
+      { path :"new-customer", component : NewCustomerComponent},
+      { path :"customer-accounts/:id", component : CustomerAccountsComponent},
+      { path: 'edit-customer/:id', component: EditCustomerComponent },
+    ]}
 
 ];
 

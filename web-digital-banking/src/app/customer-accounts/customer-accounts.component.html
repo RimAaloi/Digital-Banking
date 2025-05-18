@@ -1,4 +1,39 @@
 <div class="container">
-  <div>{{customerId}}</div>
-  <div>{{customer | json}}</div>
+  <h2>Accounts for Customer ID: {{ customerId }}</h2>
+
+  <!-- Afficher un message d'erreur si applicable -->
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Tableau des comptes -->
+  <table class="table table-striped" *ngIf="accounts$ | async as accounts; else loading">
+    <thead>
+    <tr>
+      <th>Account ID</th>
+      <th>Type</th>
+      <th>Balance</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let account of accounts">
+      <td>{{ account.id }}</td>
+      <td>{{ account.type || 'Unknown' }}</td>
+      <td>{{ account.balance || 'N/A' }}</td>
+    </tr>
+    <tr *ngIf="accounts.length === 0">
+      <td colspan="3" class="text-center">No accounts found for this customer.</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Template pour le chargement -->
+  <ng-template #loading>
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </ng-template>
+
+  <!-- Bouton de fermeture -->
+  <button (click)="handleClose()" class="btn btn-secondary mt-3">Close</button>
 </div>
