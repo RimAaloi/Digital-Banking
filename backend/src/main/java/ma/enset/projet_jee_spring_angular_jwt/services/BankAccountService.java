@@ -2,6 +2,7 @@ package ma.enset.projet_jee_spring_angular_jwt.services;
 
 
 import ma.enset.projet_jee_spring_angular_jwt.dtos.*;
+import ma.enset.projet_jee_spring_angular_jwt.entities.BankAccount;
 import ma.enset.projet_jee_spring_angular_jwt.exceptions.BalanceNotSufficientException;
 import ma.enset.projet_jee_spring_angular_jwt.exceptions.BankAccountNotFoundException;
 import ma.enset.projet_jee_spring_angular_jwt.exceptions.CustomerNotFoundException;
@@ -30,4 +31,6 @@ public interface BankAccountService {
     AccountHistoryDTO getAccountHistory(String accountId, int page, int size) throws BankAccountNotFoundException;
 
     List<CustomerDTO> searchCustomers(String keyword);
+
+    List<BankAccountDTO> getAccountsByCustomerId(Long customerId);
 }

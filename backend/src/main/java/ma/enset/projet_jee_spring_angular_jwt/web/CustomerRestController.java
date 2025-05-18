@@ -3,7 +3,9 @@ package ma.enset.projet_jee_spring_angular_jwt.web;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import ma.enset.projet_jee_spring_angular_jwt.dtos.BankAccountDTO;
 import ma.enset.projet_jee_spring_angular_jwt.dtos.CustomerDTO;
+import ma.enset.projet_jee_spring_angular_jwt.entities.BankAccount;
 import ma.enset.projet_jee_spring_angular_jwt.exceptions.CustomerNotFoundException;
 import ma.enset.projet_jee_spring_angular_jwt.services.BankAccountService;
 import org.springframework.web.bind.annotation.*;
@@ -40,5 +42,9 @@ public class CustomerRestController {
     @DeleteMapping("/customers/{id}")
     public void deleteCustomer(@PathVariable Long id){
         bankAccountService.deleteCustomer(id);
+    }
+    @GetMapping("/{customerId}/accounts")
+    public List<BankAccountDTO> getCustomerAccounts(@PathVariable Long customerId) {
+        return bankAccountService.getAccountsByCustomerId(customerId);
     }
 }
