@@ -72,6 +72,25 @@ L’application intègre **Spring Security avec JWT** pour sécuriser les **API 
 
 ---
 
+## 🎥 Vidéos de Cours
+Ces vidéos ont été réalisées par **Prof. Mohamed YOUSSFI** dans le cadre du cours **Spring Boot & Angular** :
+
+### 📌 Partie 1 : presentation de projet  
+- [Présentation du Projet](https://www.youtube.com/watch?v=x6gFWmRxNPE&authuser=0)
+
+### 📌 Partie 2 : backend 
+- [video 1](https://www.youtube.com/watch?v=muuFQWnCQd0&authuser=0)
+- [video 2](https://www.youtube.com/watch?v=PTI8cniOXLc)
+
+### 📌 Partie 3 :Client
+- [Client Angular](https://www.youtube.com/watch?v=bOoPKctcE0s )
+
+### 📌 Partie 4 : Sécurité avec Spring Security  
+
+- [Sécuriser l'application avec système d'authentification]( https://www.youtube.com/watch?v=n65zFfl9dqA&authuser=0)
+
+
+
 ## 📂 Structure du projet
 ```
 structure Spring 
@@ -859,33 +878,8 @@ export class CustomerService {
 }
 ```
 
-## 🎥 Vidéos de Cours
-Ces vidéos ont été réalisées par **Prof. Mohamed YOUSSFI** dans le cadre du cours **Spring Boot & Angular** :
-
-### 📌 Partie 1 : presentation de projet  
-- [Présentation du Projet](https://www.youtube.com/watch?v=x6gFWmRxNPE&authuser=0)
-
-### 📌 Partie 2 : backend 
-- [video 1](https://www.youtube.com/watch?v=muuFQWnCQd0&authuser=0)
-- [video 2](https://www.youtube.com/watch?v=PTI8cniOXLc)
-
-### 📌 Partie 3 :Client
-- [Client Angular](https://www.youtube.com/watch?v=bOoPKctcE0s )
-- 
-### 📌 Partie 4 : Sécurité avec Spring Security  
-
-1. [Sécuriser l'application avec système d'authentification]( https://www.youtube.com/watch?v=n65zFfl9dqA&authuser=0)
 
 
----
-
-### ✅ Consignes
-
-- 🛠️ Créer un **repository GitHub**.
-- 💾 Effectuer un **commit et push toutes les 30 minutes** environ.
-- 📝 Utiliser ce fichier **`README.md`** pour rédiger le rapport du projet.
-- 📅 Faire un **dernier commit avant le 01 Juin 2025 à 13:30**.
-- 🔧 Poursuivre ensuite le développement et **compléter l’activité pratique**.
 
 ---
 
