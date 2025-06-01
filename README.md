@@ -43,12 +43,21 @@ Elle permet de gérer les clients, leurs comptes bancaires et leurs transactions
 
 ---
 
-## 📢 Notes
 
-- 🚀 
-- 🔧 
+### 📢 Notes
 
----
+- ✅ À ce stade du développement, **la gestion des clients et des comptes** est totalement implémentée.  
+  Cela comprend les opérations suivantes :
+  - ➕ **Ajout**
+  - ✏️ **Modification**
+  - 🗑️ **Suppression**
+  - 🔍 **Recherche**
+
+- 📈 **Fonctionnalité à venir – Module Dashboard** :  
+  Une section **Tableau de bord (Dashboard)** sera ajoutée dans les prochaines versions.  
+  Elle sera développée avec **Chart.js** via le module `ng2-charts`, afin d’afficher des **graphiques interactifs** et des **statistiques utiles**.  
+  L’objectif est de fournir une **visualisation claire des données clients et transactions** pour faciliter la **prise de décision**.
+
 
 ## 🔐 Sécurité
 
@@ -116,7 +125,8 @@ structure angular
 ## 📸 Captures d’écran
 
 ### 📊 Page Login  
-![Login Page](Screenshots/login.png)
+![Login Page](Screenshots/login.png)  
+
 *Caption : Page de connexion sécurisée avec JWT*
 
 ### 📊 Client List  
@@ -124,7 +134,8 @@ structure angular
 *Caption : Liste des clients avec options d’édition et suppression*
 
 ### 🔍 Search an Account  
-![Login Page](Screenshots/cherchcompte.png)
+![Login Page](Screenshots/cherchecompte.png)
+
 *Caption : Interface de recherche des comptes bancaires par ID*
 
 ### ➕ Add a Client  
