@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 
 import ma.enset.projet_jee_spring_angular_jwt.dtos.BankAccountDTO;
 import ma.enset.projet_jee_spring_angular_jwt.dtos.CustomerDTO;
-import ma.enset.projet_jee_spring_angular_jwt.entities.BankAccount;
 import ma.enset.projet_jee_spring_angular_jwt.exceptions.CustomerNotFoundException;
 import ma.enset.projet_jee_spring_angular_jwt.services.BankAccountService;
 import org.springframework.security.access.prepost.PreAuthorize;
